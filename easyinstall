@@ -10,7 +10,7 @@ fi
 if [ "$1" == start ]; then
     if [ ! -f "/bin/badvpn-udpgw" ]; then
         echo "Baixando BadVPN"
-        wget -O /bin/badvpn-udpgw https://raw.githubusercontent.com/powermx/badvpn/master/badvpn-udpgw &>/dev/null
+        wget -O /bin/badvpn-udpgw https://raw.githubusercontent.com/TelksBr/badvpn/master/badvpn-udpgw &>/dev/null
         chmod +x /bin/badvpn-udpgw
     fi
 
