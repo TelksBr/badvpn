@@ -14,8 +14,8 @@ if [ "$1" == start ]; then
         chmod +x /bin/badvpn-udpgw
     fi
 
-    /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 1000 --client-socket-sndbuf 0 --udp-mtu 9000 &
-    echo 'Badvpn iniciando no endereço 127.0.0.1:7300'
+    /bin/badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000 --max-connections-for-client 1000 --client-socket-sndbuf 0 --udp-mtu 9000 &
+    echo 'Badvpn iniciando no endereço 127.0.0.1:7200'
 fi
 
 if [ "$1" == stop ]; then
@@ -39,7 +39,7 @@ Description=BadVPN UDP Gateway
 After=network.target
 
 [Service]
-ExecStart=/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 1000 --client-socket-sndbuf 0 --udp-mtu 9000
+ExecStart=/bin/badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000 --max-connections-for-client 1000 --client-socket-sndbuf 0 --udp-mtu 9000
 Restart=always
 
 [Install]
