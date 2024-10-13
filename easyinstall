@@ -10,8 +10,8 @@ fi
 if [ "$1" == start ]; then
     if [ ! -f "/bin/badvpn-udpgw" ]; then
         echo "Baixando BadVPN"
-        wget -O /bin/badvpn-udpgw https://raw.githubusercontent.com/TelksBr/badvpn/master/badvpn-udpgw &>/dev/null
-        chmod +x /bin/badvpn-udpgw
+        wget -O /bin/badvpn-udpgw64 https://raw.githubusercontent.com/TelksBr/badvpn/master/badvpn-udpgw64 &>/dev/null
+        chmod +x /bin/badvpn-udpgw64
     fi
 
     /bin/badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000 --max-connections-for-client 1000 --client-socket-sndbuf 0 --udp-mtu 9000 &
